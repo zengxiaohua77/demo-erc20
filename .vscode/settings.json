@@ -1,0 +1,26 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.renderControlCharacters": true,
+  "editor.renderWhitespace": "all",
+  "editor.tabSize": 4,
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 5000,
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "git.suggestSmartCommit": true,
+  "git.repositoryScanMaxDepth": 3,
+  "markdown.validate.enabled": true,
+  "[solidity]": {
+    "editor.defaultFormatter": "NomicFoundation.hardhat-solidity"
+  },
+  "[toml]": {
+    "editor.defaultFormatter": "tamasfe.even-better-toml"
+  },
+  "window.commandCenter": true,
+  "window.zoomLevel": 1,
+  "workbench.editor.enablePreview": false
+}
