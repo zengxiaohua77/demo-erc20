@@ -1,0 +1,30 @@
+{
+  "name": "demo-erc20",
+  "version": "1.0.0",
+  "license": "MIT",
+  "main": "",
+  "author": "Daniel Liu",
+  "keywords": [
+    "ethereum",
+    "defi",
+    "solidity",
+    "smart contracts",
+    "token",
+    "erc20",
+    "blacklist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitee.com/gzliudan/demo-erc20"
+  },
+  "bugs": {
+    "url": "https://gitee.com/matrix-tech/MatrixProtocol/issues",
+    "email": "liudaniel@qq.com"
+  },
+  "homepage": "https://github.com/gzliudan/demo-erc20",
+  "engines": {
+    "node": ">=14.15.0",
+    "npm": ">=6.14.8",
+    "yarn": ">=1.22.0"
+  }
+}
