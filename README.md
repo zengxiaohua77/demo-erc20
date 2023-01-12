@@ -1,13 +1,34 @@
-# Sample Hardhat Project
+# Demo ERC20 contract project
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
-
-Try running some of the following tasks:
+## Download
 
 ```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.js
+git clone https://github.com/gzliudan/demo-erc20
+cd demo-erc20
+yarn
+```
+
+## Compile
+
+```shell
+yarn clean
+yarn compile
+```
+
+## Test
+
+```shell
+yarn test
+```
+
+## Deploy
+
+```shell
+yarn deploy:mumbai
+```
+
+## Verify
+
+```shell
+yarn verify:mumbai
 ```
