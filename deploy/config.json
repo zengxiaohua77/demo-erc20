@@ -1,0 +1,10 @@
+{
+  "blacklist_tokens": [
+    {
+      "key": "blacklist_token_demo",
+      "name": "Demo Token",
+      "symbol": "DTK",
+      "quantity": 1000000
+    }
+  ]
+}
