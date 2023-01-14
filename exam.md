@@ -53,14 +53,14 @@ curl -s -X POST -H "Content-Type: application/json" https://matic-mumbai.chainst
 
 ### 5.1 修复 BlacklistTokenFactory 合约里的 bug
 
-因为本代码仓库里的 BlacklistTokenFactory 合约里有 bug，导致有些测试用例失败，请修复 contracts/BlacklistTokenFactory.sol，通过全部测试。
+命令 `yarn deploy:mumbai` 会在 mumbai 链上部署 BlacklistTokenFactory 和一个 BlacklistToken 合约（简称 T1 ），地址保存在 deploy/deployed/mumbai.json 文件里。请在区块链浏览器上调用 BlacklistTokenFactory 合约里的 createBlacklistToken 函数，动态创建一个 BlacklistToken 合约（简称 T2 ）， T2 的地址保存在 BlacklistTokenFactory 的 blacklistTokens 数组里，也可以在交易里的 CreateBlacklistToken 事件里查看 T2 的地址。因为目前  BlacklistTokenFactory 合约里有 bug，导致 `yarn test` 报告某些测试用例失败。请在区块链浏览器上比较 T1 和 T2 的功能，找出 T2 的功能问题。并修复合约 contracts/BlacklistTokenFactory.sol 的代码，能通过文件 test/BlacklistTokenFactory.test.js 里全部的自动化测试。
 
 评分标准：
 
--   找到 Bug：截图 10 分
--   解释原因：10 分
--   修改合约代码：截图 20 分
--   通过全部测试用例：截图 10 分
+-   找到问题： 截图 10 分
+-   解释原因： 10 分
+-   修改合约代码： 20 分
+-   `yarn test`全部通过： 10 分
 
 ### 5.2 优化 BlacklistTokenFactory.test.js
 
@@ -75,12 +75,12 @@ curl -s -X POST -H "Content-Type: application/json" https://matic-mumbai.chainst
 评分标准：
 
 -   代码正确： 30 分
--   部署成功：10 分
--   代码校验：10 分
+-   部署成功： 10 分
+-   代码校验： 10 分
 -   手工测试： 10 分
 -   
 ### 5.4 对 BlacklistToken 合约进行自动化测试
 
-test/BlacklistToken.test.js 文件里现在没有测试用例，请尽量补齐。可参考 https://hardhat.org/tutorial/testing-contracts 和网上相关资料。
+目前 BlacklistToken 还没有写测试用例，请在 test/BlacklistToken.test.js 文件里尽量补齐。可参考 https://hardhat.org/tutorial/testing-contracts 和网上其它开源项目的测试用例。
 
 评分标准：每个有效的（能执行通过）测试用例 10 分，性质相同的用例不重复计分
