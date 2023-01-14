@@ -53,14 +53,14 @@ curl -s -X POST -H "Content-Type: application/json" https://matic-mumbai.chainst
 
 ### 5.1 修复 BlacklistTokenFactory 合约里的 bug
 
-命令 `yarn deploy:mumbai` 会在 mumbai 链上部署 BlacklistTokenFactory 和一个 BlacklistToken 合约（简称 T1 ），地址保存在 deploy/deployed/mumbai.json 文件里。请在区块链浏览器上调用 BlacklistTokenFactory 合约里的 createBlacklistToken 函数，动态创建一个 BlacklistToken 合约（简称 T2 ）， T2 的地址保存在 BlacklistTokenFactory 的 blacklistTokens 数组里，也可以在交易里的 CreateBlacklistToken 事件里查看 T2 的地址。因为目前  BlacklistTokenFactory 合约里有 bug，导致 `yarn test` 报告某些测试用例失败。请在区块链浏览器上比较 T1 和 T2 的功能，找出 T2 的功能问题。并修复合约 contracts/BlacklistTokenFactory.sol 的代码，能通过文件 test/BlacklistTokenFactory.test.js 里全部的自动化测试。
+命令 `yarn deploy:mumbai` 会在 mumbai 链上部署 BlacklistTokenFactory 和一个 BlacklistToken 合约（简称 BT1 ），地址保存在 deploy/deployed/mumbai.json 文件里（提示：删除该文件可以重新部署）。请在区块链浏览器上调用 BlacklistTokenFactory 合约里的 createBlacklistToken 函数，动态创建一个 BlacklistToken 合约（简称 BT2 ）， BT2 的地址保存在 BlacklistTokenFactory 的 blacklistTokens 数组里，也可以在交易里的 CreateBlacklistToken 事件里查看 BT2 的地址。因为目前 BlacklistTokenFactory 合约里有 bug，导致 `yarn test` 报告某些测试用例失败。请在区块链浏览器上比较 BT1 和 BT2 的功能，找出 BT2 功能异常的问题现象。并尝试修复合约 contracts/BlacklistTokenFactory.sol 的代码，能通过文件 test/BlacklistTokenFactory.test.js 里全部的自动化测试。
 
 评分标准：
 
--   找到问题： 截图 10 分
--   解释原因： 10 分
+-   找到问题现象： 截图 10 分
+-   解释问题原因： 10 分
 -   修改合约代码： 20 分
--   `yarn test`全部通过： 10 分
+-   自动化测试全部通过： 10 分
 
 ### 5.2 优化 BlacklistTokenFactory.test.js
 
