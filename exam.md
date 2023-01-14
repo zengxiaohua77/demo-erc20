@@ -75,6 +75,12 @@ curl -s -X POST -H "Content-Type: application/json" https://matic-mumbai.chainst
 评分标准：
 
 -   代码正确： 30 分
--   自动化测试：每个有效的（能执行通过）测试用例 10 分，性质相同的用例不重复计分，和转账功能无关的用例不计分
 -   部署成功：10 分
 -   代码校验：10 分
+-   手工测试： 10 分
+-   
+### 5.4 对 BlacklistToken 合约进行自动化测试
+
+test/BlacklistToken.test.js 文件里现在没有测试用例，请尽量补齐。可参考 https://hardhat.org/tutorial/testing-contracts 和网上相关资料。
+
+评分标准：每个有效的（能执行通过）测试用例 10 分，性质相同的用例不重复计分
