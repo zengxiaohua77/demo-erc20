@@ -34,18 +34,22 @@ curl -s -X POST -H "Content-Type: application/json" https://matic-mumbai.chainst
 ---
 答案：
 -   第1个API：net_version
+```shell
 curl --location --request POST 'https://matic-mumbai.chainstacklabs.com/' \
 --header 'content-type: application/json' \
 --data-raw '{"jsonrpc": "2.0", "method": "net_version", "params": [], "id": 67}'
+```
 
 -   截图
 ![img_v2_65e63b35-9fb2-4752-940e-621a68937f6g](https://user-images.githubusercontent.com/40379005/212618523-23cb8558-1a91-4d9c-952d-6666c472c86f.jpg)
 
 
 -   第2个API：net_peerCount
+```shell
 curl --location --request POST 'https://matic-mumbai.chainstacklabs.com/' \
 --header 'content-type: application/json' \
 --data-raw ' {"jsonrpc":"2.0","method":"net_peerCount","params":[],"id":74}'
+```
 -   截图
 ![img_v2_05e3b336-9d5e-4a3e-b24c-7ff91fab2fbg](https://user-images.githubusercontent.com/40379005/212618374-e81f88fd-4996-4441-832b-eb402373c0b3.jpg)
 
