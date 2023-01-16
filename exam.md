@@ -13,11 +13,11 @@
 参考资料： https://docs.soliditylang.org/en/latest/types.html
 
 答案：
-bool：可以保存 true 或 false 作为其值的布尔值
-uint：这是无符号整数，只能保存0和正值
-int：这是可以保存负值和正值的有符号整数
-address：这表示以太坊环境中的账户地址
-byte：这表示固定大小的字节数组（byte1 到 bytes32）
+-   bool：可以保存 true 或 false 作为其值的布尔值
+-   uint：这是无符号整数，只能保存0和正值
+-   int：这是可以保存负值和正值的有符号整数
+-   address：这表示以太坊环境中的账户地址
+-   byte：这表示固定大小的字节数组（byte1 到 bytes32）
 
 ## 第 2 题：列举并测试以太坊的 JSONRPC API。
 
