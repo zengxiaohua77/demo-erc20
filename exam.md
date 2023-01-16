@@ -32,6 +32,38 @@ curl -s -X POST -H "Content-Type: application/json" https://matic-mumbai.chainst
 ![1673317288973](https://user-images.githubusercontent.com/7695325/211447294-e9e142c1-0fec-4588-9c8a-7ebfbd38a907.png)
 
 ---
+答案：
+-   第1个API：net_version
+import requests
+
+def josnrpc():
+    url = 'https://matic-mumbai.chainstacklabs.com/'
+    headers = {
+        'content-type': 'application/json'
+    }
+    body = {"jsonrpc": "2.0", "method": "net_version", "params": [], "id": 67}
+    response = requests.post(url=url, headers=headers, json=body)
+    print(response.text)
+josnrpc()
+
+-   截图
+![image](https://user-images.githubusercontent.com/40379005/212616363-3d6efb8d-1871-49e1-afc0-c207ace2f60c.png)
+
+-   第2个API：net_peerCount
+import requests
+
+def josnrpc():
+    url = 'https://matic-mumbai.chainstacklabs.com/'
+    headers = {
+        'content-type': 'application/json'
+    }
+    body = {"jsonrpc":"2.0","method":"net_peerCount","params":[],"id":74}
+    response = requests.post(url=url, headers=headers, json=body)
+    print(response.text)
+josnrpc()
+-   截图
+![image](https://user-images.githubusercontent.com/40379005/212616625-651f601c-faae-471d-b311-2396a8060ed1.png)
+
 
 ## 第 3 题：同一个合约里代码相同的函数，为什么 GAS 费不同？
 
