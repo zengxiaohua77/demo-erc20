@@ -13,8 +13,7 @@
 参考资料： https://docs.soliditylang.org/en/latest/types.html
 
 答案：
--   值类型：bool、int、address、bytes、enum、function
--   引用类型：string、array、structs、mapping、bytes
+-   bool、int、address、bytes1〜bytes32、enum、function、uint8、uint16、unit24、uint256、int8、int16、int24、int256、string、array、structs、mapping
 
 ## 第 2 题：列举并测试以太坊的 JSONRPC API。
 
@@ -33,7 +32,67 @@ curl -s -X POST -H "Content-Type: application/json" https://matic-mumbai.chainst
 
 ---
 答案：
--   第1个API：eth_mining
+-   第1个API：eth_protocolVersion
+```shell
+curl -s -X POST -H "Content-Type: application/json" https://matic-mumbai.chainstacklabs.com \
+-d '{"jsonrpc":"2.0","method":"eth_protocolVersion","params":[],"id":67}'
+```
+![image](https://user-images.githubusercontent.com/40379005/212827773-da20f754-93a2-46ce-871c-7508eed888a4.png)
+
+
+-   第2个API：eth_syncing
+```shell
+curl -s -X POST -H "Content-Type: application/json" https://matic-mumbai.chainstacklabs.com \
+-d '{"jsonrpc":"2.0","method":"eth_syncing","params":[],"id":1}'
+```
+![image](https://user-images.githubusercontent.com/40379005/212828019-317bc800-1e14-4336-8301-473f242aa379.png)
+
+-   第3个API：eth_coinbase
+```shell
+curl -s -X POST -H "Content-Type: application/json" https://matic-mumbai.chainstacklabs.com \
+-d '{"jsonrpc":"2.0","method":"eth_coinbase","params":[],"id":64}'
+```
+![image](https://user-images.githubusercontent.com/40379005/212828174-d7660911-c67e-4242-a5dd-a4bd42e746d8.png)
+
+-   第4个API：eth_mining
+```shell
+curl -s -X POST -H "Content-Type: application/json" https://matic-mumbai.chainstacklabs.com \
+-d '{"jsonrpc":"2.0","method":"eth_mining","params":[],"id":71}'
+```
+![image](https://user-images.githubusercontent.com/40379005/212828479-15a41306-f4f7-4fcf-8215-cae53681246e.png)
+
+
+-   第5个API：eth_hashrate
+```shell
+curl -s -X POST -H "Content-Type: application/json" https://matic-mumbai.chainstacklabs.com \
+-d '{"jsonrpc":"2.0","method":"eth_hashrate","params":[],"id":71}'
+```
+![image](https://user-images.githubusercontent.com/40379005/212828596-c66aa3e4-65f8-48b6-b719-a494b86ca3df.png)
+
+
+-   第6个API：eth_gasPrice
+```shell
+curl -s -X POST -H "Content-Type: application/json" https://matic-mumbai.chainstacklabs.com \
+-d '{"jsonrpc":"2.0","method":"eth_gasPrice","params":[],"id":73}'
+```
+![image](https://user-images.githubusercontent.com/40379005/212828712-82965f65-f2b8-4d5f-8dbc-49d42e6c05fe.png)
+
+-   第7个API：eth_accounts
+```shell
+curl -s -X POST -H "Content-Type: application/json" https://matic-mumbai.chainstacklabs.com \
+-d '{"jsonrpc":"2.0","method":"eth_accounts","params":[],"id":1}'
+```
+![image](https://user-images.githubusercontent.com/40379005/212828882-1d0f16b0-1b72-4cf3-aea8-93b207d9ddfc.png)
+
+-   第8个API：eth_getBalance
+```shell
+curl -s -X POST -H "Content-Type: application/json" https://matic-mumbai.chainstacklabs.com \
+-d '{"jsonrpc":"2.0","method":"eth_getBalance","params":["0x407d73d8a49eeb85d32cf465507dd71d507100c1", "latest"],"id":1}'
+```
+![image](https://user-images.githubusercontent.com/40379005/212829105-73d73433-6cfb-4a1e-99cb-272aa80ab02e.png)
+
+
+-   第9个API：eth_mining
 ```shell
 curl --location --request POST 'https://matic-mumbai.chainstacklabs.com/' \
 --header 'content-type: application/json' \
@@ -43,7 +102,7 @@ curl --location --request POST 'https://matic-mumbai.chainstacklabs.com/' \
 ![img_v2_15350480-e3c1-43b3-a81f-06606246920g](https://user-images.githubusercontent.com/40379005/212619781-43bfff69-0483-4d3c-aa68-77e45a66b507.jpg)
 
 
--   第2个API：net_peerCount
+-   第10个API：net_peerCount
 ```shell
 curl --location --request POST 'https://matic-mumbai.chainstacklabs.com/' \
 --header 'content-type: application/json' \
