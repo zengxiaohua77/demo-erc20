@@ -13,8 +13,8 @@
 参考资料： https://docs.soliditylang.org/en/latest/types.html
 
 答案：
--   值类型：布尔类型（bool）、整型（int）、地址类型（address）、定长字节数组（bytes）、枚举类型（enum）、函数类型（function）
--   引用类型：字符串（string）、数组（array）、结构体（structs）、映射（mapping）、不定长字节数组（bytes）
+-   值类型：bool、int、address、bytes、enum、function
+-   引用类型：string、array、structs、mapping、bytes
 
 ## 第 2 题：列举并测试以太坊的 JSONRPC API。
 
