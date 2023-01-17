@@ -34,25 +34,32 @@ curl -s -X POST -H "Content-Type: application/json" https://matic-mumbai.chainst
 答案：
 -   第1个API：eth_protocolVersion
 ```shell
-curl -s -X POST -H "Content-Type: application/json" https://matic-mumbai.chainstacklabs.com \
--d '{"jsonrpc":"2.0","method":"eth_protocolVersion","params":[],"id":67}'
+curl --location --request POST 'https://matic-mumbai.chainstacklabs.com/' \
+--header 'content-type: application/json' \
+--data-raw '{"jsonrpc":"2.0","method":"eth_protocolVersion","params":[],"id":67}'
 ```
-![image](https://user-images.githubusercontent.com/40379005/212827773-da20f754-93a2-46ce-871c-7508eed888a4.png)
+![image](https://user-images.githubusercontent.com/40379005/212829460-ea69ea3b-75f2-4e18-9929-3d980222c7e0.png)
+
 
 
 -   第2个API：eth_syncing
 ```shell
-curl -s -X POST -H "Content-Type: application/json" https://matic-mumbai.chainstacklabs.com \
--d '{"jsonrpc":"2.0","method":"eth_syncing","params":[],"id":1}'
+curl --location --request POST 'https://matic-mumbai.chainstacklabs.com/' \
+--header 'content-type: application/json' \
+--data-raw '{"jsonrpc":"2.0","method":"eth_syncing","params":[],"id":1}'
 ```
-![image](https://user-images.githubusercontent.com/40379005/212828019-317bc800-1e14-4336-8301-473f242aa379.png)
+![image](https://user-images.githubusercontent.com/40379005/212829622-d96af5b6-8ca9-4005-9f7c-b640c863adfd.png)
+
+
 
 -   第3个API：eth_coinbase
 ```shell
-curl -s -X POST -H "Content-Type: application/json" https://matic-mumbai.chainstacklabs.com \
--d '{"jsonrpc":"2.0","method":"eth_coinbase","params":[],"id":64}'
+curl --location --request POST 'https://matic-mumbai.chainstacklabs.com/' \
+--header 'content-type: application/json' \
+--data-raw '{"jsonrpc":"2.0","method":"eth_coinbase","params":[],"id":64}'
 ```
-![image](https://user-images.githubusercontent.com/40379005/212828174-d7660911-c67e-4242-a5dd-a4bd42e746d8.png)
+![image](https://user-images.githubusercontent.com/40379005/212829712-e0e946b1-b206-451a-b6db-9aa8cef09330.png)
+
 
 -   第4个API：eth_mining
 ```shell
@@ -82,7 +89,8 @@ curl -s -X POST -H "Content-Type: application/json" https://matic-mumbai.chainst
 curl -s -X POST -H "Content-Type: application/json" https://matic-mumbai.chainstacklabs.com \
 -d '{"jsonrpc":"2.0","method":"eth_accounts","params":[],"id":1}'
 ```
-![image](https://user-images.githubusercontent.com/40379005/212828882-1d0f16b0-1b72-4cf3-aea8-93b207d9ddfc.png)
+![image](https://user-images.githubusercontent.com/40379005/212829357-9c4cb256-87c9-413a-9ae0-3fd9d710e261.png)
+
 
 -   第8个API：eth_getBalance
 ```shell
@@ -92,14 +100,14 @@ curl -s -X POST -H "Content-Type: application/json" https://matic-mumbai.chainst
 ![image](https://user-images.githubusercontent.com/40379005/212829105-73d73433-6cfb-4a1e-99cb-272aa80ab02e.png)
 
 
--   第9个API：eth_mining
+-   第9个API：eth_sign
 ```shell
 curl --location --request POST 'https://matic-mumbai.chainstacklabs.com/' \
 --header 'content-type: application/json' \
---data-raw '{"jsonrpc":"2.0","method":"eth_mining","params":[],"id":71}'
+--data-raw '{"jsonrpc":"2.0","method":"eth_sign","params":["0x9b2055d370f73ec7d8a03e965129118dc8f5bf83", "0xdeadbeaf"],"id":1}'
 ```
+![image](https://user-images.githubusercontent.com/40379005/212829867-9cb3cc26-af70-4a69-a6ff-381dfb40a5bf.png)
 
-![img_v2_15350480-e3c1-43b3-a81f-06606246920g](https://user-images.githubusercontent.com/40379005/212619781-43bfff69-0483-4d3c-aa68-77e45a66b507.jpg)
 
 
 -   第10个API：net_peerCount
